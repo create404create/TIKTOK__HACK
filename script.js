@@ -53,7 +53,7 @@ function checkUser() {
   }, 2000);
 }
 
-//  brute force attack
+// Fake brute force attack
 function startAttack() {
   let attackPanel = document.getElementById("attackPanel");
   let logsDiv = document.getElementById("logs");
@@ -64,32 +64,8 @@ function startAttack() {
   logsDiv.innerHTML = "";
   progressBar.style.width = "0%";
 
-  let Passwords = [
+  let fakePasswords = [
     "123456", "password", "tiger123", "farooq786", "letmein", "qwerty", "dragon", "love123", 
-    "kingtiger", "badshah786", "iloveyou", "secret", "mypassword", "admin", "pass123", "hackme" "123456", "password", "tiger123", "farooq786", "letmein", "qwerty", "dragon", "love123", 
-    "kingtiger", "badshah786", "iloveyou", "secret", "mypassword", "admin", "pass123", "hackme""123456", "password", "tiger123", "farooq786", "letmein", "qwerty", "dragon", "love123", 
-    "kingtiger", "badshah786", "iloveyou", "secret", "mypassword", "admin", "pass123", "hackme""123456", "password", "tiger123", "farooq786", "letmein", "qwerty", "dragon", "love123", 
-    "kingtiger", "badshah786", "iloveyou", "secret", "mypassword", "admin", "pass123", "hackme""123456", "password", "tiger123", "farooq786", "letmein", "qwerty", "dragon", "love123", 
-    "kingtiger", "badshah786", "iloveyou", "secret", "mypassword", "admin", "pass123", "hackme""123456", "password", "tiger123", "farooq786", "letmein", "qwerty", "dragon", "love123", 
-    "kingtiger", "badshah786", "iloveyou", "secret", "mypassword", "admin", "pass123", "hackme""123456", "password", "tiger123", "farooq786", "letmein", "qwerty", "dragon", "love123", 
-    "kingtiger", "badshah786", "iloveyou", "secret", "mypassword", "admin", "pass123", "hackme""123456", "password", "tiger123", "farooq786", "letmein", "qwerty", "dragon", "love123", 
-    "kingtiger", "badshah786", "iloveyou", "secret", "mypassword", "admin", "pass123", "hackme""123456", "password", "tiger123", "farooq786", "letmein", "qwerty", "dragon", "love123", 
-    "kingtiger", "badshah786", "iloveyou", "secret", "mypassword", "admin", "pass123", "hackme""123456", "password", "tiger123", "farooq786", "letmein", "qwerty", "dragon", "love123", 
-    "kingtiger", "badshah786", "iloveyou", "secret", "mypassword", "admin", "pass123", "hackme""123456", "password", "tiger123", "farooq786", "letmein", "qwerty", "dragon", "love123", 
-    "kingtiger", "badshah786", "iloveyou", "secret", "mypassword", "admin", "pass123", "hackme""123456", "password", "tiger123", "farooq786", "letmein", "qwerty", "dragon", "love123", 
-    "kingtiger", "badshah786", "iloveyou", "secret", "mypassword", "admin", "pass123", "hackme""123456", "password", "tiger123", "farooq786", "letmein", "qwerty", "dragon", "love123", 
-    "kingtiger", "badshah786", "iloveyou", "secret", "mypassword", "admin", "pass123", "hackme""123456", "password", "tiger123", "farooq786", "letmein", "qwerty", "dragon", "love123", 
-    "kingtiger", "badshah786", "iloveyou", "secret", "mypassword", "admin", "pass123", "hackme""123456", "password", "tiger123", "farooq786", "letmein", "qwerty", "dragon", "love123", 
-    "kingtiger", "badshah786", "iloveyou", "secret", "mypassword", "admin", "pass123", "hackme""123456", "password", "tiger123", "farooq786", "letmein", "qwerty", "dragon", "love123", 
-    "kingtiger", "badshah786", "iloveyou", "secret", "mypassword", "admin", "pass123", "hackme""123456", "password", "tiger123", "farooq786", "letmein", "qwerty", "dragon", "love123", 
-    "kingtiger", "badshah786", "iloveyou", "secret", "mypassword", "admin", "pass123", "hackme""123456", "password", "tiger123", "farooq786", "letmein", "qwerty", "dragon", "love123", 
-    "kingtiger", "badshah786", "iloveyou", "secret", "mypassword", "admin", "pass123", "hackme""123456", "password", "tiger123", "farooq786", "letmein", "qwerty", "dragon", "love123", 
-    "kingtiger", "badshah786", "iloveyou", "secret", "mypassword", "admin", "pass123", "hackme""123456", "password", "tiger123", "farooq786", "letmein", "qwerty", "dragon", "love123", 
-    "kingtiger", "badshah786", "iloveyou", "secret", "mypassword", "admin", "pass123", "hackme""123456", "password", "tiger123", "farooq786", "letmein", "qwerty", "dragon", "love123", 
-    "kingtiger", "badshah786", "iloveyou", "secret", "mypassword", "admin", "pass123", "hackme""123456", "password", "tiger123", "farooq786", "letmein", "qwerty", "dragon", "love123", 
-    "kingtiger", "badshah786", "iloveyou", "secret", "mypassword", "admin", "pass123", "hackme""123456", "password", "tiger123", "farooq786", "letmein", "qwerty", "dragon", "love123", 
-    "kingtiger", "badshah786", "iloveyou", "secret", "mypassword", "admin", "pass123", "hackme""123456", "password", "tiger123", "farooq786", "letmein", "qwerty", "dragon", "love123", 
-    "kingtiger", "badshah786", "iloveyou", "secret", "mypassword", "admin", "pass123", "hackme""123456", "password", "tiger123", "farooq786", "letmein", "qwerty", "dragon", "love123", 
     "kingtiger", "badshah786", "iloveyou", "secret", "mypassword", "admin", "pass123", "hackme"
   ];
 
