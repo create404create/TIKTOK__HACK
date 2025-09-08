@@ -1,27 +1,40 @@
-body {
-  background: #111;
-  color: #fff;
-  font-family: Arial, sans-serif;
-  text-align: center;
-  padding: 20px;
+/* Matrix background */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background: black;
+  color: #00ff00;
+  font-family: monospace;
 }
 
+#matrix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* Container */
 .container {
-  max-width: 500px;
+  max-width: 600px;
   margin: auto;
-  background: #1c1c1c;
+  margin-top: 30px;
+  background: rgba(0,0,0,0.8);
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 0 15px rgba(255,0,0,0.4);
+  box-shadow: 0 0 15px #00ff00;
+  text-align: center;
 }
 
 h1 {
-  color: #ff4444;
+  color: #00ff00;
 }
 
 .note {
   font-size: 14px;
-  color: #bbb;
+  color: #ccc;
   margin-bottom: 15px;
 }
 
@@ -31,20 +44,22 @@ h1 {
   border-radius: 8px;
   border: none;
   outline: none;
+  background: #111;
+  color: #0f0;
 }
 
 .input-box button {
   padding: 10px 15px;
   border: none;
   border-radius: 8px;
-  background: #ff4444;
-  color: white;
+  background: #00ff00;
+  color: black;
+  font-weight: bold;
   cursor: pointer;
+  margin-left: 5px;
 }
 
-.hidden {
-  display: none;
-}
+.hidden { display: none; }
 
 .profile-pic {
   width: 150px;
@@ -52,29 +67,52 @@ h1 {
   margin: 15px 0;
 }
 
-button {
-  margin-top: 15px;
-  background: #ff4444;
-  padding: 10px 15px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  color: #fff;
-  font-weight: bold;
-}
-
 .error {
   color: red;
   font-weight: bold;
 }
 
-#passwords {
+/* Attack Panel */
+#logs {
   text-align: left;
-  max-height: 200px;
+  max-height: 250px;
   overflow-y: auto;
-  background: #000;
+  background: black;
   padding: 10px;
   border-radius: 8px;
   margin: 10px 0;
   font-family: monospace;
+  color: #0f0;
+  font-size: 14px;
+}
+
+.progress-container {
+  width: 100%;
+  background: #222;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+#progress-bar {
+  height: 20px;
+  width: 0%;
+  background: #0f0;
+  border-radius: 8px;
+}
+
+/* Typing animation */
+.typing {
+  border-right: 2px solid #0f0;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(20) 1, blink .5s step-end infinite alternate;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
 }
