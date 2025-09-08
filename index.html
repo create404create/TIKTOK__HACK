@@ -2,38 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>TikTok Brute Force Panel</title>
+  <title>Fake TikTok Brute Force Attack</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <canvas id="matrix"></canvas>
+
   <div class="container">
-    <h1>🔥  TikTok Brute Force Attack 🔥</h1>
-    <p class="note">⚠️!</p>
+    <h1>🔥 Fake TikTok Brute Force Attack 🔥</h1>
+    <p class="note">⚠️ This is a prank demo for fun & educational purpose only. Not real hacking.</p>
 
     <div class="input-box">
       <input type="text" id="username" placeholder="Enter TikTok Username">
       <button onclick="checkUser()">Search</button>
     </div>
 
-    <div id="loading" class="hidden">⏳ Checking username...</div>
+    <div id="loading" class="hidden typing">Checking username...</div>
 
     <div id="profile" class="hidden">
       <img src="https://i.ibb.co/VYpLcdPT/BADSHAH.png" alt="Profile" class="profile-pic">
-      <h2>💪❤ فاروق ٹائیگر ❤💪</h2>
+      <h2>💪 Farooq Tiger 💪</h2>
       <p><strong>327</strong> Following</p>
       <p><strong>1982</strong> Followers</p>
       <p><strong>102.1K</strong> Likes</p>
       <button id="startAttack" onclick="startAttack()">🚀 Start Brute Force Attack</button>
     </div>
 
-    <div id="error" class="hidden error">❌ Sorry, is username ko hack nahi kar sakte.</div>
+    <div id="error" class="hidden error">❌ Sorry, this username cannot be hacked.</div>
 
     <div id="attackPanel" class="hidden">
-      <h3>🔓 Brute Force in progress...</h3>
-      <div id="passwords"></div>
+      <h3 class="typing">🔓 Brute Force in progress...</h3>
+      <div id="logs"></div>
+      <div class="progress-container">
+        <div id="progress-bar"></div>
+      </div>
       <p id="timer">Timer: 60s</p>
     </div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
